@@ -16,11 +16,6 @@ These examples show how to run tasks concurrently in Java using multiple threads
 **Description:**  
 Defines two classes (`MyThread1` and `MyThread2`) that extend the `Thread` class and override the `run()` method. Both threads are started using the `start()` method to execute simultaneously.
 
-#### 🧠 What You Learn:
-- How to create threads by extending the `Thread` class.
-- Difference between `run()` and `start()`.
-- How threads execute in parallel.
-
 ---
 
 ### 2. 🔧 `ThreadUsingRunnableInterface.java`
@@ -28,10 +23,33 @@ Defines two classes (`MyThread1` and `MyThread2`) that extend the `Thread` class
 **Description:**  
 Defines two classes (`MThread1` and `MThread2`) that implement the `Runnable` interface. Thread objects are created by passing these runnable instances to the `Thread` constructor.
 
-#### 🧠 What You Learn:
-- How to create threads using the `Runnable` interface.
-- Benefits of separating task logic from thread logic.
-- Cleaner approach for multiple inheritance scenarios.
+---
+
+### 3. 📌 `ConstructoraFromThread.java`
+**Concept:** Thread Naming and ID  
+**Description:**  
+Demonstrates how to assign thread names using `Thread(String name)` constructor and how to fetch:
+- Thread ID using `getId()`
+- Thread Name using `getName()`
+
+---
+
+### 4. 📌 `ThreadPriorities.java`
+**Concept:** Thread Priorities  
+**Description:**  
+Multiple threads are created with different priorities using:
+- `Thread.MIN_PRIORITY`
+- `Thread.MAX_PRIORITY`  
+This shows how thread priorities can influence scheduling (though final behavior depends on OS and JVM).
+
+---
+
+### 5. 📌 `ConstructorFromThread2.java`
+**Concept:** Runnable with Thread Constructor  
+**Description:**  
+Illustrates creating a thread using a `Runnable` object and naming it through `Thread(Runnable r, String name)`. Also logs:
+- Thread name
+- Thread ID
 
 ---
 
@@ -43,13 +61,10 @@ Defines two classes (`MThread1` and `MThread2`) that implement the `Runnable` in
 - ✅ Overriding `run()` Method
 - ✅ Using `start()` to Begin Threads
 - ✅ Basic Loop-Based Execution in Threads
+- ✅ Thread constructor with name
+- ✅ Getting thread name and ID
+- ✅ `Runnable` interface for multithreading
+- ✅ Thread priorities
+- ✅ `start()` vs `run()` behavior
 
 ---
-
-## 📝 Output Example
-
-```text
-Thread1 is running
-Thread2 is running
-I am Runnable Thread 1
-I am Runnable Thread 2
